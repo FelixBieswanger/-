@@ -12,6 +12,7 @@ class Desc_stat:
     def print(self):
         print("=====")
         print("mittel", self.mittelwert)
+        print("mittel_relativ",self.calc_mittelwert_rel())
         print("varianz", self.varianz)
         print("stand", self.standardabweichung)
         print("nord_stand", self.norm_standardabweichung)
@@ -24,6 +25,18 @@ class Desc_stat:
         for el in self.data:
             sum += el
         return sum/self.leng
+
+    def absolute_frequenzy(self,a):
+        return self.data.count(a)
+
+    def relativ_frequenzy(self,a):
+        return self.absolute_frequenzy(a)/self.leng
+        
+    def calc_mittelwert_rel(self):
+        mittel = 0
+        for a in self.data:
+            mittel += (a * self.relativ_frequenzy(a)) 
+        return mittel
 
     def calc_varianz(self):
         abweich = 0
