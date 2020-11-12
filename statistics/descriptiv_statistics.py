@@ -15,7 +15,7 @@ class Desc_stat:
         print("mittel_relativ",self.calc_mittelwert_rel())
         print("varianz", self.varianz)
         print("stand", self.standardabweichung)
-        print("nord_stand", self.norm_standardabweichung)
+        print("norm_stand", self.norm_standardabweichung)
         print()
         print()
         print()
