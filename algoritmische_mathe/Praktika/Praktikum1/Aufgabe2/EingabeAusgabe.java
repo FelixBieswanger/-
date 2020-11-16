@@ -13,7 +13,11 @@ public class EingabeAusgabe {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        System.out.println("Die summe beider Zahlen lautet " + (a + b));
+        int summe = a + b;
+        int produkt = a * b;
+
+        System.out.println("Die summe beider Zahlen lautet " + summe);
+        System.out.println("Die summe beider Zahlen lautet " + (a * b));
 
     }
 
